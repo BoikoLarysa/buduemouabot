@@ -1,4 +1,23 @@
-/* =======Стили для сброса======= */
+/* =======Підключення шрифтів======= */
+@font-face{
+    font-family: 'Evolventa';
+    src: url('./fonts/Evolventa-Bold.woff2'),
+        url('./fonts/Evolventa-Bold.woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Evolventa';
+    src: url('./fonts/Evolventa-Regular.woff2'),
+        url('./fonts/Evolventa-Regular.woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =======Скидання стилів======= */
 .list {
     list-style: none;
 }
@@ -40,6 +59,7 @@ img {
     height: auto;
 }
 
+/* =======Загальні======= */
 .container {
     padding: 0 15px;
     margin: 0 auto;
@@ -67,7 +87,9 @@ img {
     padding: 50px 0px;
 }
 
-
+body{
+    font-family: 'Evolventa', sans-serif;
+}
 /* Хедер */
 
 .header-container{
@@ -80,7 +102,11 @@ img {
 
 .header-section__logo{
     /* margin-right: 600px; */
-    color: black;
+    color: yellowgreen;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
     
 }
 
@@ -121,7 +147,6 @@ img {
 
 .hero{
     max-width: 1600px;
-    /* height: 500px; */
     padding-top: 200px;
     padding-bottom: 200px;
     margin-left: auto;
@@ -152,12 +177,18 @@ img {
 
 .hero__link{
     color: #fff;
+    font-weight: 700;
+    font-size: 26px;
     
 }
 
 .hero__title{
     color: #fff;
-   margin-top: 30px;
+    margin-top: 28px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 
@@ -189,29 +220,53 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 26px;
     line-height: 1.14;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.7);
     color: #fff;
 }
 
 /* Суть роботи чат-бота */
-.description{
+.description-section{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     color: #fff;
     background-color: greenyellow;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.7)), url("./image/description_background.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.9), rgba(47, 48, 58, 0.9)), url("./image/description_background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+.description-section__title{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description-section__list{
+    margin-left: 40px;
+}
+
+.description-section__text, 
+.description-section__item{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-indent: 15px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
 
 /* Перелік наших послуг */
 .about-us-section__title{
@@ -221,12 +276,14 @@ img {
 
 .about-us-section__list{
     display: flex;
+    flex-wrap: wrap;
 
 }
 
 .about-us-section__item{
     position: relative;
 }
+
 
 .about-us-section__img{
     width: 200px;
@@ -253,6 +310,10 @@ img {
     color: #fff;
 }
 
+.about-us-section__link{
+    color: yellowgreen;
+}
+
 /* Соціальні мережі */
 
 .social-links-section__title{
@@ -262,10 +323,10 @@ img {
 
 .social-links-section__list{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
 }
 
-.social-links-section__item:not(last-child){
+.social-links-section__item:not(:last-child){
     margin-right: 50px;
 }
 
