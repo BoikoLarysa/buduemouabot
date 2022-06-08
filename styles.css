@@ -89,6 +89,11 @@ img {
 
 body{
     font-family: 'Evolventa', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
 }
 /* Хедер */
 
@@ -96,42 +101,42 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     height: 150px;
 }
 
 .header-section__logo{
-    /* margin-right: 600px; */
-    color: yellowgreen;
+    color: greenyellow;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 1200px) {
-    .header-section__logo {
-        margin-right: 600px;
-    }
+.header-section__logo:hover,
+.header-section__logo:focus{
+    color: yellowgreen;
 }
 
 .button-bot,
 .header-section__feedback{
-    width: 200px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     margin: auto 0px;
     border-radius: 4px;
     background-color: greenyellow;
     cursor: pointer;
-    color: black;
+    color: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* @media screen and (max-width: 480px) {
-    header-section__contacts {
-        display: inline-block;
-    }
-} */
+.button-bot:hover,
+.button-bot:focus,
+.header-section__feedback:hover,
+.header-section__feedback:focus{
+    background-color: yellowgreen;
+}
+.button-bot{
+    padding: 10px 36px;
+}
 
 .header-section__contacts{
     display: inline-block;
@@ -140,7 +145,7 @@ body{
 }
 
 .header-section__item:not(:last-child){
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 /* Банер */
@@ -151,13 +156,12 @@ body{
     padding-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
-    background-color: greenyellow;
     text-align: center;
-
+    background-color: greenyellow;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./image/Kyiv_hero.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero__text-container{
@@ -179,7 +183,6 @@ body{
     color: #fff;
     font-weight: 700;
     font-size: 26px;
-    
 }
 
 .hero__title{
@@ -187,17 +190,28 @@ body{
     margin-top: 28px;
     font-weight: 400;
     font-size: 30px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
 }
 
 
 /* Головні напрямки роботи */
 .main-areas__list{
-    display: flex;
+    display: block;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-bottom: -20px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-areas__list{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-areas__list {
+        justify-content: space-around;
+    }
 }
 
 .main-areas_item{
@@ -208,7 +222,6 @@ body{
 .main-areas__img{
     width: 500px;
     height: 350px;
-    color: #fff;
 }
 
 .main_areas__text{
@@ -246,9 +259,6 @@ body{
     font-style: italic;
     font-weight: 700;
     font-size: 24px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-
     margin-bottom: 20px;
     text-align: center;
 }
@@ -259,29 +269,50 @@ body{
 
 .description-section__text, 
 .description-section__item{
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
     text-indent: 15px;
     text-align: justify;
     margin-bottom: 15px;
+}
+
+.description-section__link{
+    color: #fff;
+    text-decoration: underline;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.description-section__link:hover,
+.description-section__link:focus{
+    color: yellowgreen;
 }
 
 /* Перелік наших послуг */
 .about-us-section__title{
     margin-bottom: 15px;
     text-align: center;
+    color: greenyellow;
+    font-weight: 700;
 }
 
 .about-us-section__list{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    
+}
 
+@media screen and (min-width: 1200px) {
+    .about-us-section__list {
+    flex-wrap: nowrap;
+    }
 }
 
 .about-us-section__item{
     position: relative;
+}
+
+.about-us-section__item{
+    margin-bottom: 10px;
 }
 
 
@@ -291,8 +322,6 @@ body{
 }
 
 .about-us-section__text{
-    padding-bottom: 10px;
-
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -302,9 +331,6 @@ body{
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.7);
     color: #fff;
@@ -319,11 +345,18 @@ body{
 .social-links-section__title{
     text-align: center;
     margin-bottom: 40px;
+    color: greenyellow;
 }
 
 .social-links-section__list{
     display: flex;
     justify-content:space-around;
+}
+
+@media screen and (min-width: 768px) {
+    .social-links-section__list{
+        justify-content: center;
+    }
 }
 
 .social-links-section__item:not(:last-child){
@@ -338,4 +371,15 @@ body{
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    
+}
+
+.social-links-section__link:hover .social-links-section__icon,
+.social-links-section__link:focus .social-links-section__icon{
+    fill: yellowgreen;
+}
+
+.social-links-section__icon{
+    fill: #fff;
+    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
