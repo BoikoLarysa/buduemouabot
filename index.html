@@ -17,17 +17,40 @@
   <body>
     <header class="header-section">
       <div class="container header-container">
-        <a href="https://t.me/BuduemoUA_bot" class="header-section__logo link" lang="en"
-          >buduemoUA</a
-        >
-        <ul class="header-section__contacts">
+        <p class="header-section__name">buduemoUA</p>
+
+        <ul class="social-links-section__list list">
+          <li class="social-links-section__item">
+            <a href="https://t.me/BuduemoUA_bot" class="social-links-section__link link">
+              <svg class="social-links-section__icon" width="30" height="30">
+                <use href="./image/svg-icon.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-section__item">
+            <a href="https://www.instagram.com/buduemo_ua/" class="social-links-section__link link">
+              <svg class="social-links-section__icon" width="30" height="30">
+                <use href="./image/svg-icon.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-section__item">
+            <a href="https://www.facebook.com/BuduemoUA/" class="social-links-section__link link">
+              <svg class="social-links-section__icon" width="30" height="30">
+                <use href="./image/svg-icon.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <!-- <ul class="header-section__contacts">
           <li class="header-section__item list">
             <a href="https://t.me/BuduemoUA_bot" class="button-bot link" lang="en">telegram_bot</a>
           </li>
           <li class="header-section__item list">
             <a href="" class="header-section__feedback link">Зворотній зв'язок</a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </header>
 
@@ -168,6 +191,11 @@
                 >BuduemoUA</a
               >
             </p>
+            <div class="button">
+              <a href="https://t.me/BuduemoUA_bot" class="button-bot link" lang="en"
+                >telegram_bot</a
+              >
+            </div>
           </div>
         </section>
       </section>
@@ -242,9 +270,17 @@
         </div>
       </section>
 
-      <section class="social-links-section section">
-        <div class="container">
-          <h2 class="social-links-section__title">Ми у соціальних мережах</h2>
+      <footer class="footer-section section container">
+        <!-- <section class="social-links-section section"> -->
+        <img
+          class="footer__logo"
+          src="./image/logo-white.svg"
+          alt="логотип сайту"
+          width="100"
+          height="100"
+        />
+        <div class="social-links-container">
+          <h2 class="social-links-section__title">Долучайтесь</h2>
           <ul class="social-links-section__list list">
             <li class="social-links-section__item">
               <a href="https://t.me/BuduemoUA_bot" class="social-links-section__link link">
@@ -272,7 +308,8 @@
             </li>
           </ul>
         </div>
-      </section>
+        <!-- </section> -->
+      </footer>
     </main>
   </body>
 </html>
